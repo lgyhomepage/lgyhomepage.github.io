@@ -1,0 +1,35 @@
+ssh-keygen -t rsa -C "您的邮箱"。   //创建SSH Key  把后缀.pub（公匙）用记事本打开 复制粘贴到github 的 settings SSH keys 
+
+git config --global user.name "lgyhomepage"    //配置用户名  github 的用户名
+ 
+git config --global user.email "1948873046@qq.com"  //配置邮箱，注册github用的邮箱
+
+git init    // 初始化文件
+
+git add d.txt  // 要添加到github上的文件
+
+git status    //查看状态，待添加状态显示为绿色
+
+git commit -m "第一次提交"     // 提交说明，可写可不写
+
+git remote add origin https://github.com/lgyhomepage/lgyhomepage.github.io.git    
+// 将本地的仓库关联到github上
+
+git pull --rebase origin master    // 把github上的文件克隆到当前文件夹，这一步的原因是
+预防报类似failed to push some refs to......的错误
+
+git push -u origin master    // 提交
+
+
+关于注册github的说明：
+遇到的问题
+问题1 ：点击验证邮箱的时候跳到不是当前用户的github账户上。
+原因：可能是浏览器的问题。
+办法： 在别的浏览器中打开接收所要验证的账户的邮箱，点击验证。
+
+需要注意：
+1 把主页面命名成index.html
+2 仓库名为用户名加.github.io  (后期通过这个链接访问你的主页)
+
+
+
